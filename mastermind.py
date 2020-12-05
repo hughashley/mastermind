@@ -8,7 +8,7 @@ class NewGame:
         self.__compare__(self.guess, self.ref) #compare initial pair
 
     def __guess__(self, guess): 
-        ref = self.ref #define ref in newGuess
+        ref = self.ref #define ref in guess function
         guess = [num for num in guess] #extract int's from new guess
         self.__compare__ (guess, ref) #compare new guess against reference
 
