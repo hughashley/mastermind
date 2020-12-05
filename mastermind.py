@@ -7,7 +7,7 @@ class NewGame:
         self.ref = [num for num in ref] #extract int's from reference input string
         self.__compare__(self.guess, self.ref) #compare initial pair
 
-    def __newguess__(self, guess): 
+    def __guess__(self, guess): 
         ref = self.ref #define ref in newGuess
         guess = [num for num in guess] #extract int's from new guess
         self.__compare__ (guess, ref) #compare new guess against reference
@@ -24,9 +24,11 @@ class NewGame:
             elif flag == False and guess[i]==ref[i-1]: #check for flag and 
                 black+=1 #increment black
             else:
-                flag = False
-        print(white, "white", black, "black")
-            
+                flag = False #reset flag
+        print(white, "white", black, "black") #print results of compare
+
+    def __version__(self):
+        print("0.9.0") #version
 
 
 
